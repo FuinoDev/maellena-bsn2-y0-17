@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +16,6 @@ a {
   color: inherit;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -46,7 +44,13 @@ a {
   font-weight: 600;
 }
 
-/* Gradient Background for Hero */
+.nav-links li a.active {
+  border-bottom: 2px solid rgb(243, 243, 243);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+
 .hero {
   position: relative;
   padding: 100px 20px;
@@ -54,43 +58,42 @@ a {
   overflow: hidden;
 }
 
-/* Create a blurred, zooming background image with a pseudo-element */
+
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('/img/hero.webp') center center / cover no-repeat;
-  filter: blur(8px);
+  background: url('/img/bg.jpg') center center / cover no-repeat;;
   transform-origin: center center;
   animation: zoomBlur 20s ease-in-out infinite;
   z-index: -1;
   transition: transform 0.3s ease;
 }
 
-/* Zoom in and out animation */
+
 @keyframes zoomBlur {
-  0%, 100% {
+  25%, 100% {
     transform: scale(1);
   }
-  50% {
+  25% {
     transform: scale(1.1);
   }
 }
 
 
 
-/* Gradient Text */
+
 .gradient-text {
-  background: linear-gradient(135deg, #10127a, #af3691);
+  background: linear-gradient(75deg, #2a369b, #750c5b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 }
 
-/* Optional: Keep content readable */
+
 .hero-content p {
-  color: rgba(81, 5, 110, 0.8);
+  color: rgba(235, 224, 240, 0.8);
 }
 
 .cta {
@@ -141,17 +144,29 @@ a {
 .cta:hover {
   background-color: #0097a7;
 }
-
 .hero-slider {
   flex: 1;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden; 
+  border-radius: 15px; 
+  background: transparent; 
 }
 
 .hero-slider img {
   width: 100%;
-  border-radius: 10px;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 15px; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-
+.hero-slider img:hover {
+  transform: scale(1.05);
+}
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -219,7 +234,6 @@ a {
 }
 
 
-/* ✅ SERVICES SECTION */
 .services-section {
   padding: 80px 20px;
   background: linear-gradient(135deg, #e0f7fa, #ffffff);
@@ -255,9 +269,12 @@ a {
 }
 
 .service-item img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
+  width: 100%;
+  height: 200px;       
+  object-fit: cover; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
 .service-item h4 {
@@ -270,12 +287,25 @@ a {
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
-/* Contact */
-/* Contact */
 .contact-section {
   padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #72ccd8, #f2fcff);
+  background: url("img/dash.jpg") center center / cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 0;
+}
+
+.contact-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-section h2 {
@@ -286,7 +316,7 @@ a {
 
 .contact-subtext {
   font-size: 18px;
-  color: #444;
+  color: #eeeeee;
   margin-bottom: 40px;
 }
 
@@ -310,7 +340,7 @@ a {
   margin: 10px 0;
 }
 
-/* Footer */
+
 .footer {
   background-color: #007fa6;
   color: white;
