@@ -422,4 +422,52 @@ a {
     width: 100%;
     padding: 20px;
   }
+
+  /* Hero section adjustments */
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-content,
+  .hero-slider {
+    width: 100%;
+  }
+
+  .hero-slider {
+    margin-top: 30px;
+  }
+
+  .hero-slider img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  /* About section cards stack */
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Services section grid stacks */
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Contact card width */
+  .contact-card {
+    width: 100%;
+    padding: 20px;
+  }
 }
