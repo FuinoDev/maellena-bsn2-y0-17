@@ -84,13 +84,19 @@ a {
 
 
 .gradient-text {
-  background: linear-gradient(75deg, #2a369b, #750c5b);
+  background: linear-gradient(75deg, #ffffff, #ce9ac1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 }
 
+.herp-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #eeeeee;
+}
 
 .hero-content p {
   color: rgba(235, 224, 240, 0.8);
@@ -358,14 +364,15 @@ a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1em 1em;
+    padding:  1em 1em;
   }
 
   .nav-links {
     flex-direction: row;
-    gap: 1em;
+    gap: 0.7em;
     flex-wrap: wrap;
     justify-content: center;
+    size: 10px;
   }
 
   /* Hero section adjustments */
